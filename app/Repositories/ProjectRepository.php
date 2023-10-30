@@ -54,6 +54,6 @@ class ProjectRepository
 
     public function getAllProjectsPaginated($perPage = 5)
     {
-        return $this->model->with('creator')->paginate($perPage);
+        return $this->model->with('creator')->orderBy('id', 'desc')->paginate($perPage);
     }
 }

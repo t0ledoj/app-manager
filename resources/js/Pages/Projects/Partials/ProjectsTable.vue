@@ -42,13 +42,6 @@
             </tbody>
           </table>
         </div>
-        <!-- <div class="flex flex-wrap justify-center mt-4 hidden sm:flex">
-            <div v-for="(link, index) in projects.links" :key="index" class="w-full md:w-auto mb-2 md:mb-0 md:mr-2">
-                <Link v-if="link.url" :href="link.url" v-html="link.label"
-                    class="block w-full text-center px-4 py-3 text-sm leading-4 text-gray-700 border rounded"
-                    :class="link.active ? 'bg-white' : ''" />
-            </div>
-        </div> -->
         <div class="flex justify-center mt-4 hidden sm:flex">
             <div v-for="(link, index) in projects.links" :key="index">
                 <Link 
