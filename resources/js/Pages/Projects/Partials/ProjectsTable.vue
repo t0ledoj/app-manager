@@ -74,7 +74,7 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100 text-center">
                     There are no registered projects yet.
                     <div class="add-project-button pt-4">
-                        <button class="mr-1 mb-1 px-4 py-3 text-sm leading-4 font-semibold text-sm bg-slate-500 hover:bg-slate-300 text-white rounded shadow-sm" 
+                        <button class="mr-1 mb-3 px-4 py-3 text-sm leading-4 font-semibold text-sm bg-slate-500 hover:bg-slate-300 text-white rounded shadow-sm" 
                             @click="showEditModal()"> Add a new project! </button>
                     </div>
                 </div>
@@ -283,7 +283,6 @@ const updateProject = () => {
     formEdit.patch(route('project.update'), {
         preserveState: true,
         onSuccess: () => closeModal(),
-        onFinish: () => formEdit.reset(),
     });
 };
 const deleteProject = () => {
