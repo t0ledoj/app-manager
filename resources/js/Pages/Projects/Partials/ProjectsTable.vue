@@ -110,7 +110,7 @@
                             autofocus
                             autocomplete="start_date"
                         />
-                        <InputError class="mt-2" :message="formEdit.errors.name" />
+                        <InputError class="mt-2" :message="formEdit.errors.start_date" />
                     </div>
                     <div class="w-1/2">
                         <InputLabel for="end_date" value="End Date" />
