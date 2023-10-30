@@ -210,12 +210,12 @@
 </template>
   
 <script setup>
-import Modal from '@/Components/Modal.vue';
-import DangerButton from '@/Components/DangerButton.vue';
-import SecondaryButton from '@/Components/SecondaryButton.vue';
-import InputError from '@/Components/InputError.vue';
-import InputLabel from '@/Components/InputLabel.vue';
-import TextInput from '@/Components/TextInput.vue';
+import Modal from '@/components/Modal.vue';
+import DangerButton from '@/components/DangerButton.vue';
+import SecondaryButton from '@/components/SecondaryButton.vue';
+import InputError from '@/components/InputError.vue';
+import InputLabel from '@/components/InputLabel.vue';
+import TextInput from '@/components/TextInput.vue';
 import { useForm, Link, usePage } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
