@@ -239,10 +239,10 @@ const formDelete = useForm({
 });
 const formEdit = useForm({
     id: '',
-    name: 'teste', 
-    start_date: '2018-07-22', 
-    end_date: '2018-07-22', 
-    value: 400, 
+    name: '', 
+    start_date: '', 
+    end_date: '', 
+    value: '', 
     status: '',
     creator_id: ''
 });
@@ -280,7 +280,7 @@ const createProject = () => {
     formEdit.post(route('project.store'), {
         preserveState: true,
         onSuccess: () => closeModal(),
-        onFinish: () => {},
+        onFinish: () => formEdit.reset(),
     });
 };
 const updateProject = () => {
@@ -290,7 +290,7 @@ const updateProject = () => {
     }
     formEdit.patch(route('project.update'), {
         preserveState: true,
-        onSuccess: () => showingEditModal.value = false,
+        onSuccess: () => closeModal(),
         onFinish: () => formEdit.reset(),
     });
 };
