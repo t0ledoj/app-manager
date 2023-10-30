@@ -272,8 +272,7 @@ const createProject = () => {
     formEdit.creator_id = usePage().props.auth.user.id
     formEdit.post(route('project.store'), {
         preserveState: true,
-        onSuccess: () => closeModal(),
-        onFinish: () => formEdit.reset(),
+        onSuccess: () => closeModal()
     });
 };
 const updateProject = () => {
