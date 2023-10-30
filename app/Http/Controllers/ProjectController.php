@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProjectDestroyRequest;
 use App\Http\Requests\ProjectStoreRequest;
 use App\Services\ProjectService;
 use App\Http\Requests\ProjectUpdateRequest;
@@ -51,12 +52,8 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Request $request): RedirectResponse
+    public function destroy(ProjectDestroyRequest $request): RedirectResponse
     {
-        $request->validate([
-            'password' => ['required', 'current_password'],
-            'id' => ['required'],
-        ]);
         $this->projectService->delete($request->id);
 
         return Redirect::to('/dashboard');
